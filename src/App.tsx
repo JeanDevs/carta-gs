@@ -18,7 +18,30 @@ interface Category {
   items: MenuItem[]
 }
 
+const TRAGOS_PRICE = '15.00'
+const TRAGOS = [
+  'Mojito',
+  'Piña Colada',
+  'Pisco Sour',
+  'Laguna Azul',
+  'Machu Picchu',
+  'Cuba Libre',
+  'Pantera',
+  'Algarrobina',
+  'Durazno',
+  'Mango',
+]
+
 const MENU: Category[] = [
+  {
+    id: 'tragos',
+    title: 'Tragos',
+    tagline: 'Cócteles de la casa · todos S/ 15.00',
+    items: TRAGOS.map((name) => ({
+      name,
+      variants: [{ label: '', price: TRAGOS_PRICE }],
+    })),
+  },
   {
     id: 'cervezas',
     title: 'Cervezas',
